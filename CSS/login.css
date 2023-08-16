@@ -262,11 +262,12 @@ a:hover {
         0 0 80px #be32ff, 0 0 120px #be32ff;
 }
 
-span{
+span {
     text-shadow: 0 0 10px #bf45f8, 0 0 20px #be32ff, 0 0 40px #be32ff,
-            0 0 80px #be32ff, 0 0 120px #1f002e;
+        0 0 80px #be32ff, 0 0 120px #1f002e;
 }
-p{
+
+p {
     text-shadow: 0 0 10px #bf45f8, 0 0 20px #be32ff, 0 0 40px #be32ff,
-            0 0 80px #be32ff, 0 0 120px #1f002e;
+        0 0 80px #be32ff, 0 0 120px #1f002e;
 }

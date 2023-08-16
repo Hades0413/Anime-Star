@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           span.classList.remove("active");
           span.classList.add("fade");
-        }, (span + 1) * 50);
+        }, (index + 1) * 50);
       });
     }, 2000);
 
@@ -44,28 +44,45 @@ inputs.forEach((input) => {
   input.addEventListener("blur", rem);
 });
 
-// defivinr las variables que almacena a los usuarios
+var usersData = {};
 
-var usuario = document.querySelector('input[type="text]');
-var clave = document.querySelector('input[type="password"]');
+function registrarUsuario(formulario) {
+  event.preventDefault();
 
-// definir arrays para los usuarios y sus contraseñas
+  var nuevoUsuario = formulario.txtusuario.value;
+  var nuevaClave = formulario.txtclave.value;
+
+  if (localStorage.getItem(nuevoUsuario)) {
+    Swal.fire({
+      icon: "error",
+      title: "Usuario ya existe",
+      text: "Por favor elige otro nombre de usuario",
+    });
+    return;
+  }
+
+  localStorage.setItem(nuevoUsuario, nuevaClave);
+
+  Swal.fire({
+    icon: "success",
+    title: "Registro exitoso",
+    text: "Usuario registrado correctamente",
+    showConfirmButton: false,
+    timer: 1500,
+  }).then(() => {
+    formulario.reset();
+    window.location.href = "index.html";
+  });
+}
 
 var usuarios = ["Claudia", "Rodrigo", "Hades", "Adrian"];
 var claves = ["admin1", "admin2", "admin3", "admin4"];
 
 function cargar(frm) {
   var usu = frm.txtusuario.value;
-  let i = -1;
+  var storedClave = localStorage.getItem(usu);
 
-  for (let j = 0; j < usuarios.length; j++) {
-    if (usuarios[j] == usu) {
-      i = j;
-      break;
-    }
-  }
-
-  if (i == -1) {
+  if (!storedClave) {
     window.event.preventDefault();
     Swal.fire({
       icon: "error",
@@ -76,14 +93,13 @@ function cargar(frm) {
   }
 
   var clave = frm.txtclave.value;
-  if (clave == claves[i]) {
+  if (clave === storedClave) {
     window.event.preventDefault();
     Swal.fire({
       icon: "success",
       title: "Bienvenido",
       text: "Estás en tu casa " + usu,
       showConfirmButton: true,
-
       allowOutsideClick: false,
       allowEscapeKey: false,
       allowEnterKey: false,
