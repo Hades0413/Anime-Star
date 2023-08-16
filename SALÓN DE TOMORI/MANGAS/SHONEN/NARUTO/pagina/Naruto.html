@@ -12,20 +12,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" />
-
-
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        
 </head>
 
 <body>
+
     <nav>
-        <a href="../../../../INICIO/Inicio.html" class="titlogo">Anime Star</a>
+        <div class="logo">Anime Star</div>
+        <label for="btn" class="icon">
+            <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
         <ul>
             <li><a href="../../../../INICIO/Inicio.html">Home</a></li>
-
-
             <li><a href="../../../../CONÓCENOS/conócenos.html">Conócenos</a></li>
-            <!--Cosplay BARRA-->
-            <li> <a href="#">Cosplay</a>
+            <li>
+                <label for="btn-1" class="show">Cosplay</label>
+                <a href="#">Cosplay</a>
+                <input type="checkbox" id="btn-1">
                 <ul>
                     <li><a href="../../../../COSPLAY/JUJUTSU KAISEN/pagina/Jujutsu.html">Jujutsu</a></li>
                     <li><a href="../../../../COSPLAY/KIMETSU NO YAIBA/pagina/Kimetsu.html">Kimetsu</a></li>
@@ -34,11 +40,10 @@
                     <li><a href="../../../../COSPLAY/TOKYO REVENGERS/pagina/Tokyo_Revengers.html">Tokyo R</a></li>
                 </ul>
             </li>
-
-            <!--Cosplay Barra-->
-
-            <!--Tienda Barra-->
-            <li><a href="#">Tienda</a>
+            <li>
+                <label for="btn-2" class="show">Tienda</label>
+                <a href="#">Tienda</a>
+                <input type="checkbox" id="btn-2">
                 <ul class="categoria">
                     <li><a href="../../../../TIENDA/ACCESORIOS/tienda.html">Accesorios</a></li>
                     <li><a href="../../../../TIENDA/ARMAS/Tienda2.html">Armas</a></li>
@@ -46,12 +51,15 @@
                     <li><a href="../../../../TIENDA/JUEGOS/Tienda4.html">Juegos</a></li>
                 </ul>
             </li>
-            <!--Tienda Barra-->
-
-            <!--Manga  Barra-->
-            <li><a href="#">Manga</a>
+            <li>
+                <label for="btn-3" class="show">Manga</label>
+                <a href="#">Manga</a>
+                <input type="checkbox" id="btn-3">
                 <ul>
-                    <li><a href="#">Shonen</a>
+                    <li>
+                        <label for="btn-4" class="show">Shonen</label>
+                        <a href="#">Shonen</a>
+                        <input type="checkbox" id="btn-4">
                         <ul>
                             <li><a href="../../BLACK CLOVER/página/Black_Clover.html">Black Clover</a></li>
                             <li><a href="../../DRAGON BALL SUPER/página/DBS.html">Dragon BS</a></li>
@@ -64,18 +72,22 @@
                             <li><a href="../../TOKYO REVENGERS/pagina/Tokyo_Revengers.html">Tokyo R</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Romance</a>
+                    <li>
+                        <label for="btn-5" class="show">Romance</label>
+                        <a href="#">Romance</a>
+                        <input type="checkbox" id="btn-5">
                         <ul>
                             <li><a href="../../../ROMANCE/Kamisama Hajimemashita/pagina/Kamisama.html">Kamisama</a></li>
                             <li><a href="../../../ROMANCE/HORIMIYA/pagina/Horimiya.html">Horimiya</a></li>
-                            <li><a
-                                    href="../../../ROMANCE/SONO BISQUE DOLL WA KOI SURU/pagina/Sono_Bisque.html">SonoBisque</a>
-                            </li>
+                            <li><a href="../../../ROMANCE/SONO BISQUE DOLL WA KOI SURU/pagina/Sono_Bisque.html">Sono
+                                    Bisque</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Seinen</a>
+                    <li>
+                        <label for="btn-6" class="show">Seinen</label>
+                        <a href="#">Seinen</a>
+                        <input type="checkbox" id="btn-6">
                         <ul>
-                            <li><a href="../../../SEINEN/Death Note/pagina/Death.html">Death Note</a></li>
                             <li><a href="../../../SEINEN/NAZO NO KANOJO X/página/Nazo_no_Kanojo.html">Nazo no Kanojo</a>
                             </li>
                             <li><a href="../../../SEINEN/NEO GENESIS EVANGELION/página/Evangelion.html">Evangelion</a>
@@ -84,16 +96,12 @@
                     </li>
                 </ul>
             </li>
-            <!--Manga Barra-->
-
-            <!-- ROPA BARRA -->
             <li><a href="../../../../ROPA/ropa.html">Ropa</a></li>
-            <!-- ROPA BARRA -->
-
-
             <li><a href="../../../../CONSULTAS/consultas.html">Consultas</a></li>
         </ul>
     </nav>
+
+
     <center>
         <aside>
             <div class="box">
@@ -106,7 +114,7 @@
         </aside>
     </center>
     <main>
-        <aside>
+        <aside id="card-container">
 
             <div class="card1">
                 <div class="face front">
@@ -122,7 +130,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na3.jpg" alt="">
@@ -154,7 +162,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na7.jpg" alt="">
@@ -185,7 +193,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na11.jpg" alt="">
@@ -217,7 +225,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na15.jpg" alt="">
@@ -248,7 +256,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na19.jpg" alt="">
@@ -278,7 +286,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na23.jpg" alt="">
@@ -309,7 +317,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na27.jpg" alt="">
@@ -340,7 +348,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na31.png" alt="">
@@ -358,7 +366,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na33.png" alt="">
@@ -390,7 +398,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na37.png" alt="">
@@ -410,7 +418,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na39.jpg" alt="">
@@ -427,6 +435,20 @@
             </div>
 
 
+            <div class="card1">
+                <div class="face front">
+                    <img loading="lazy" src="../imagenes/na1.jpg" alt="">
+                    <h3>Japan</h3>
+                </div>
+                <div class="face back">
+                    <h3>Curiosidades</h3>
+                    <p>Naruto (ナルト), romanizada como NARUTO, es una serie animada de origen japonés basada en el manga
+                        del mismo nombre, escrito e ilustrado por Masashi Kishimoto.</p>
+                    <div class="link">
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+            </div>
         </aside>
         <section>
             <div class="card">
@@ -434,7 +456,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 1.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br> (Tomo 1) <br><br>
+                    <h3>Naruto <br> (Tomo 1) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -447,7 +469,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 2.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 2) <br><br>
+                    <h3>Naruto <br>(Tomo 2) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -460,7 +482,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 3.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 3)<br><br>
+                    <h3>Naruto <br>(Tomo 3)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -473,7 +495,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 4.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br> (Tomo 4)<br><br>
+                    <h3>Naruto <br> (Tomo 4)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -487,7 +509,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 5.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 5) <br><br>
+                    <h3>Naruto <br>(Tomo 5) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -500,7 +522,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 6.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 6)<br><br>
+                    <h3>Naruto <br>(Tomo 6)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -513,7 +535,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 7.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 7)<br><br>
+                    <h3>Naruto <br>(Tomo 7)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -526,7 +548,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 8.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 8)<br><br>
+                    <h3>Naruto <br>(Tomo 8)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -540,7 +562,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO9.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 9)<br><br>
+                    <h3>Naruto <br>(Tomo 9)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -553,7 +575,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 10.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 10)<br><br>
+                    <h3>Naruto <br>(Tomo 10)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -566,7 +588,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 11.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 11)<br><br>
+                    <h3>Naruto <br>(Tomo 11)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -579,7 +601,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 12.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 12)<br><br>
+                    <h3>Naruto <br>(Tomo 12)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -592,7 +614,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 13.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 13) <br><br>
+                    <h3>Naruto <br>(Tomo 13) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -605,7 +627,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 14.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 14)<br><br>
+                    <h3>Naruto <br>(Tomo 14)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -618,7 +640,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 15.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto<br> (Tomo 15)<br><br>
+                    <h3>Naruto<br> (Tomo 15)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -631,7 +653,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 16.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 16)<br><br>
+                    <h3>Naruto <br>(Tomo 16)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -644,7 +666,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 17.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 17) <br><br>
+                    <h3>Naruto <br>(Tomo 17) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -657,7 +679,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 18.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 18)<br><br>
+                    <h3>Naruto <br>(Tomo 18)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -670,7 +692,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 19.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br> (Tomo 19)<br><br>
+                    <h3>Naruto <br> (Tomo 19)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -683,7 +705,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 20.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br> (Tomo 20)<br><br>
+                    <h3>Naruto <br> (Tomo 20)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -696,7 +718,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 21.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br> (Tomo 21) <br><br>
+                    <h3>Naruto <br> (Tomo 21) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/36.00</p>
@@ -709,7 +731,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 22.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br> (Tomo 22)<br><br>
+                    <h3>Naruto <br> (Tomo 22)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -722,7 +744,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 23.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 23)<br><br>
+                    <h3>Naruto <br>(Tomo 23)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -735,7 +757,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 24.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 24)<br><br>
+                    <h3>Naruto <br>(Tomo 24)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -748,7 +770,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 25.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 25)<br><br>
+                    <h3>Naruto <br>(Tomo 25)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -761,7 +783,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 26.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 26)<br><br>
+                    <h3>Naruto <br>(Tomo 26)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -774,7 +796,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 27.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 27)<br><br>
+                    <h3>Naruto <br>(Tomo 27)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -787,7 +809,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 28.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 28)<br><br>
+                    <h3>Naruto <br>(Tomo 28)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -800,7 +822,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 29.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto<br> (Tomo 29) <br><br>
+                    <h3>Naruto<br> (Tomo 29) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -813,7 +835,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 30.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 30)<br><br>
+                    <h3>Naruto <br>(Tomo 30)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -826,7 +848,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 31.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 31)<br><br>
+                    <h3>Naruto <br>(Tomo 31)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -839,7 +861,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 32.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 32) <br><br>
+                    <h3>Naruto <br>(Tomo 32) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -852,7 +874,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 33.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 33)<br><br>
+                    <h3>Naruto <br>(Tomo 33)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -865,7 +887,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 34.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 34)<br><br>
+                    <h3>Naruto <br>(Tomo 34)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -878,7 +900,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 35.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 35)<br><br>
+                    <h3>Naruto <br>(Tomo 35)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -892,7 +914,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 36.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 36) <br><br>
+                    <h3>Naruto <br>(Tomo 36) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -905,7 +927,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 37.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 37)<br><br>
+                    <h3>Naruto <br>(Tomo 37)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -918,7 +940,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 38.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 38)<br><br>
+                    <h3>Naruto <br>(Tomo 38)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -931,7 +953,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 39.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 39)<br><br>
+                    <h3>Naruto <br>(Tomo 39)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -945,7 +967,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 40.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 40) <br><br>
+                    <h3>Naruto <br>(Tomo 40) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -958,7 +980,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 41.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 41)<br><br>
+                    <h3>Naruto <br>(Tomo 41)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -971,7 +993,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 42.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 42)<br><br>
+                    <h3>Naruto <br>(Tomo 42)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -984,7 +1006,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 43.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 43)<br><br>
+                    <h3>Naruto <br>(Tomo 43)
                         <h5>Naruto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -997,7 +1019,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 44.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 44) <br><br>
+                    <h3>Naruto <br>(Tomo 44) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1010,7 +1032,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 45.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 45)<br><br>
+                    <h3>Naruto <br>(Tomo 45)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1023,7 +1045,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 46.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 46)<br><br>
+                    <h3>Naruto <br>(Tomo 46)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1036,7 +1058,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 47.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 47)<br><br>
+                    <h3>Naruto <br>(Tomo 47)
                         <h5>Naruto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1049,7 +1071,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 48.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto<br> (Tomo 48) <br><br>
+                    <h3>Naruto<br> (Tomo 48) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1062,7 +1084,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 49.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 49)<br><br>
+                    <h3>Naruto <br>(Tomo 49)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1075,7 +1097,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 50.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 50)<br><br>
+                    <h3>Naruto <br>(Tomo 50)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1088,7 +1110,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 51.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 51)<br><br>
+                    <h3>Naruto <br>(Tomo 51)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1101,7 +1123,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 52.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 52) <br><br>
+                    <h3>Naruto <br>(Tomo 52) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1114,7 +1136,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 53.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 53)<br><br>
+                    <h3>Naruto <br>(Tomo 53)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1127,7 +1149,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 54.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto<br> (Tomo 54)<br><br>
+                    <h3>Naruto<br> (Tomo 54)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1140,7 +1162,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 55.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 55)<br><br>
+                    <h3>Naruto <br>(Tomo 55)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1153,7 +1175,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 56.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 56) <br><br>
+                    <h3>Naruto <br>(Tomo 56) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1166,7 +1188,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 57.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 57)<br><br>
+                    <h3>Naruto <br>(Tomo 57)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1179,7 +1201,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 58.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 58)<br><br>
+                    <h3>Naruto <br>(Tomo 58)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1192,7 +1214,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 59.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 59)<br><br>
+                    <h3>Naruto <br>(Tomo 59)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1205,7 +1227,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 60.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto<br> (Tomo 60) <br><br>
+                    <h3>Naruto<br> (Tomo 60) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1218,7 +1240,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 61.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 61)<br><br>
+                    <h3>Naruto <br>(Tomo 61)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1231,7 +1253,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 62.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 62)<br><br>
+                    <h3>Naruto <br>(Tomo 62)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1244,7 +1266,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 63.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 63) <br><br>
+                    <h3>Naruto <br>(Tomo 63) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1257,7 +1279,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 64.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 64)<br><br>
+                    <h3>Naruto <br>(Tomo 64)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1283,7 +1305,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 66.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 66)<br><br>
+                    <h3>Naruto <br>(Tomo 66)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1296,7 +1318,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 67.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 67) <br><br>
+                    <h3>Naruto <br>(Tomo 67) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1309,7 +1331,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 68.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 68)<br><br>
+                    <h3>Naruto <br>(Tomo 68)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1322,7 +1344,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 69.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 69)<br><br>
+                    <h3>Naruto <br>(Tomo 69)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1335,7 +1357,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 70.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto<br>(Tomo 70)<br><br>
+                    <h3>Naruto<br>(Tomo 70)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1348,7 +1370,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 71.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br>(Tomo 71) <br><br>
+                    <h3>Naruto <br>(Tomo 71) 
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1361,7 +1383,7 @@
                     <img loading="lazy" src="../imagenes/NARUTO 72.jpg" alt="">
                 </figure>
                 <div class="contenido">
-                    <h3>Naruto <br> (Tomo 72)<br><br>
+                    <h3>Naruto <br> (Tomo 72)
                         <h5>Masashi Kishimoto</h5>
                     </h3>
                     <p>S/60.00</p>
@@ -1376,7 +1398,7 @@
         </section>
 
 
-        <aside>
+        <aside id="card-container">
 
             <div class="card1">
                 <div class="face front">
@@ -1392,7 +1414,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na4.jpg" alt="">
@@ -1423,7 +1445,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na8.jpg" alt="">
@@ -1454,7 +1476,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na12.jpg" alt="">
@@ -1486,7 +1508,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na16.jpg" alt="">
@@ -1518,7 +1540,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na20.jpg" alt="">
@@ -1550,7 +1572,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na24.jpg" alt="">
@@ -1582,7 +1604,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na28.jpg" alt="">
@@ -1612,7 +1634,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na32.jpg" alt="">
@@ -1629,7 +1651,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na34.jpg" alt="">
@@ -1660,7 +1682,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na38.jpg" alt="">
@@ -1676,7 +1698,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/na40.jpg" alt="">
@@ -1693,18 +1715,30 @@
                 </div>
             </div>
 
+            <div class="card1">
+                <div class="face front">
+                    <img loading="lazy" src="../imagenes/na2.jpg" alt="">
+                    <h3>Japan</h3>
+                </div>
+                <div class="face back">
+                    <h3>Curiosidades</h3>
+                    <p>En la encuesta realizada por la cadena de televisión Japonesa TV Asahi para elegir los 100
+                        Mejores mangas de la historia, Naruto alcanzó el puesto número 7.</p>
+                    <div class="link">
+                        <a href="#">Details</a>
+                    </div>
+                </div>
+            </div>
 
         </aside>
     </main>
     </div>
-    <br><br>
+    
 
     <footer>
-
-        <p>Síguenos en nuestras redes sociales</p><br><br>
-
+        <p>Síguenos en nuestras redes sociales</p>
         <a href="https://www.facebook.com/Salon-Tomori-105671722193710">
-            <div class="icon">
+            <div class="icon-footer">
                 <svg heigth="80" width="80">
                     <circle cx="40" cy="40" r=35 stroke="white" stroke-width="4" fill="none"></circle>
                 </svg>
@@ -1712,9 +1746,8 @@
             </div>
         </a>
 
-
         <a href="https://twitter.com/SalondeTomori">
-            <div class="icon">
+            <div class="icon-footer">
                 <svg heigth="80" width="80">
                     <circle cx="40" cy="40" r=35 stroke="white" stroke-width="4" fill="none"></circle>
                 </svg>
@@ -1722,11 +1755,15 @@
             </div>
         </a>
 
-
     </footer>
 
+    <script>
+        window.onscroll = () => {
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
 
+    <script src="../js/efectos.js"></script>
 </body>
 
 </html>
-<script src="../js/efectos.js"></script>

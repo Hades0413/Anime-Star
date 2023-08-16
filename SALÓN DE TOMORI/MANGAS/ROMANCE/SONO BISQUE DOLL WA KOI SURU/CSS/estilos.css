@@ -1,75 +1,126 @@
 * {
     margin: 0;
-    border: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fondo1: rgb(35, 6, 104);
+    --fondo2: linear-gradient(#000000a1, #00000017, #00000017, rgb(48, 7, 82), #00000017);
+    --sombra-logo: 0 0 10px #bf45f8, 0 0 20px #bf45f8, 0 0 40px #bf45f8;
+    --sombra-titulo: 0 0 10px #bf45f8, 0 0 20px #bf45f8, 0 0 40px #bf45f8,
+        0 0 80px #bf45f8, 0 0 120px #bf45f8;
+}
+
+html::-webkit-scrollbar {
+    width: 1.2rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #222;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--fondo1);
 }
 
 body {
-    background-color: rgb(35, 6, 104);
+    background-color: var(--fondo1);
+    background-image: var(--fondo2);
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    border: 1px solid black;
-    width: 99.8%;
-    background-image: linear-gradient(#000000a1, #00000017, #00000017, rgb(48, 7, 82), #00000017);
-
 }
 
-a {
-    text-decoration: none;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(0, 0, 0);
-    height: 60px;
+nav {
+    background: #000000;
     padding: 20px;
-    border-bottom: 0.1px solid white;
-    background-image: linear-gradient(#000000, #000000, #000000);
 }
 
-.logo {
-    display: flex;
-    align-items: center;
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
     color: white;
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+    text-shadow: var(--sombra-logo);
+}
+
+nav .logo:hover {
+    text-shadow: var(--sombra-titulo);
 
 }
 
-.logo img:hover {
-    box-shadow: 0 0 10px #45014b, 0 0 15px #70175a, 0 0 20px #3e0355;
-
+nav ul {
+    float: right;
+    margin-right: 40px;
+    list-style: none;
+    position: relative;
 }
 
-.nombre-pagina {
-    text-shadow: 0 0 10px #0e0808, 0 0 40px #5a335a, 0 0 50px #331181;
-    ;
+nav ul li {
+    float: left;
+    display: inline-block;
+    background: #000000;
+    margin: 0 5px;
 }
 
-.logo img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50px;
-    border: 1px solid white;
-    box-shadow: 0 0 10px #796f6f, 0 0 40px #b586c4, 0 0 20px #280775;
+nav ul li a {
+    color: white;
+    background: #000000;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 15px;
 }
 
-#botones a :hover {
-    box-shadow: 0 0 10px #796f6f, 0 0 40px #272727, 0 0 50px #291033;
-    size-adjust: 15px;
+nav ul li a:hover,
+nav ul li a.active {
+    color: #dd6dff;
 }
 
-.nav-link img {
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-    border: 1px solid white;
-    border-radius: 30px;
-    box-shadow: 0 0 10px #bba8a8, 0 0 40px #1b1010, 0 0 50px #29213a;
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid #dd6dff;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
 }
 
-.imgusuario {
-    margin-right: 0;
+nav ul ul ul {
+    border-top: none;
+}
+
+nav ul li:hover>ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 150px;
+    z-index: 999;
 }
 
 #contenedor {
@@ -77,97 +128,9 @@ header {
     margin: 30px auto;
 }
 
-/*  header  */
-
-h1 {
-    padding-bottom: 40px;
-    text-align: center;
-    color: white;
-}
-
-header h2 {
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-
-h2.sub {
-    padding: 10px;
-    text-align: center;
-    color: white;
-}
-
-header img {
-    width: 100%;
-    vertical-align: bottom;
-}
-
-
-/* barra */
-
-#headerbarra {
-
-    width: 1875px;
-    height: 70px;
-    padding-left: 18px;
-
-}
-
-ul,
-ol {
-    list-style: none;
-}
-
-#barra li a {
-    display: block;
-    background-color: #000000;
-    border-radius: 30px;
-    padding: 10px 95px;
-    box-shadow: 0 0 10px #dedae6, 0 0 20px #353535;
-    color: aliceblue;
-    margin-inline: 27px;
-    text-shadow: 0 0 10px #726e6e;
-    font-weight: bold;
-    border: 1px solid white;
-}
-
-#barra>li {
-    float: left;
-}
-
-#barra li ul {
-    display: none;
-    position: absolute;
-
-}
-
-#headerbarra li ul li {
-    position: relative;
-}
-
-#barra li:hover>ul {
-    display: block;
-}
-
-#barra a:hover {
-    color: aliceblue;
-    box-shadow: 0 0 10px #bba8a8, 0 0 40px #a3a3a3, 0 0 50px #331181;
-    font-size: 17.2px;
-    transition: 0.2s;
-}
-
-
-#barra li ul li ul {
-    right: -302px;
-    top: 0px;
-    text-align: center;
-}
-
-
 main {
     display: flex;
     padding-bottom: 20px;
-    margin-left: 10px;
 }
 
 /*  aside */
@@ -177,8 +140,6 @@ aside {
 
 }
 
-
-
 /*  aside derecha  */
 aside img {
     width: 70%;
@@ -186,10 +147,10 @@ aside img {
     display: block;
 }
 
+
 /*  section  */
 
 section {
-    width: 60%;
     padding: 5px;
     display: flex;
     flex-direction: row;
@@ -247,18 +208,131 @@ section {
 }
 
 
-/* footer */
+
+/* ASIDE */
+
+.card1 {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card1 .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card1 .front {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.card1 .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card1 .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+
+.card1 .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card1 .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card1 .back .link a {
+    color: #f3f3f3;
+}
+
+.card1 .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card1 .back p {
+    letter-spacing: 1px;
+}
+
+.card1:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card1:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+/* EFECTO NEON TITULO*/
+.box h2 {
+    margin-top: 5%;
+    color: #fff;
+    font-size: 4em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #bf45f8, 0 0 20px #be32ff, 0 0 40px #be32ff,
+        0 0 80px #be32ff, 0 0 120px #be32ff;
+
+}
+
+.box {
+    margin-bottom: 55px;
+}
+
+.titlogo {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #bf45f8, 0 0 20px #bf45f8, 0 0 40px #bf45f8;
+}
+
+.titlogo:hover {
+    text-shadow: 0 0 10px #bf45f8, 0 0 20px #bf45f8, 0 0 40px #bf45f8,
+        0 0 80px #bf45f8, 0 0 120px #bf45f8;
+
+}
+
+
+/*---- Footer ----*/
 footer {
     background-color: black;
     display: flex;
-    height: 70px;
-    padding: 20px;
+    height: auto;
+    padding: auto;
     border-top: 0.1px solid white;
 }
 
 footer p {
     width: 90%;
-    margin: 30px 20px 30px 20px;
+    margin: auto 20px 30px 20px;
     color: white;
 }
 
@@ -273,7 +347,344 @@ footer div img {
     border-radius: 10px;
 }
 
+.icon-footer {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 50%;
+    transition: all .8s;
+    cursor: pointer;
+}
 
+.icon-footer:hover {
+    background-color: #1877f2;
+    box-shadow: 0 0 20px #1877f2;
+}
+
+.icon-footer:hover:nth-child(2) {
+    background-color: #1877f2;
+    box-shadow: 0 0 20px #1877f2;
+}
+
+.icon-footer i {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.7rem;
+}
+
+svg circle {
+    stroke-dasharray: 150;
+    transition: all .8s ease-in-out;
+}
+
+.icon-footer:hover circle {
+    stroke-dasharray: 220;
+}
+
+/*---- Icono de Nav ----*/
+.icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.icon.cancel-btn {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+.show,
+.icon,
+input {
+    display: none;
+}
+
+/*---- Responsive ----*/
+@media all and (max-width: 968px) {
+    nav ul {
+        margin-right: 0px;
+        float: left;
+    }
+
+    nav .logo {
+        padding-left: 30px;
+        width: 100%;
+    }
+
+    .show+a,
+    ul {
+        display: none;
+    }
+
+    nav ul li,
+    nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul li a:hover {
+        box-shadow: none;
+    }
+
+    .show {
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+
+    .show:hover {
+        color: #dd6dff;
+    }
+
+    .icon {
+        display: block;
+        color: white;
+        position: absolute;
+        top: 100;
+        /* las 3 barras*/
+        right: 40px;
+        line-height: 70px;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    nav ul ul {
+        top: 70px;
+        border-top: 0px;
+        float: none;
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul ul a {
+        padding-left: 40px;
+    }
+
+    nav ul ul ul a {
+        padding-left: 80px;
+    }
+
+    nav ul ul ul li {
+        position: static;
+    }
+
+    [id^=btn]:checked+ul {
+        display: block;
+    }
+
+    nav ul ul li {
+        border-bottom: 0px;
+    }
+
+    span.cancel:before {
+        content: '\f00d';
+    }
+
+
+    /*----- Título -----*/
+
+    h2 {
+        margin-top: 30px;
+        color: #fff;
+        font-size: 1.5em;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-shadow: var(--sombra-titulo);
+        text-align: center;
+    }
+
+
+
+    /*---- Footer ----*/
+    footer {
+        background-color: black;
+        display: flex;
+        height: auto;
+        padding: auto;
+        border-top: 0.1px solid white;
+    }
+
+    footer p {
+        width: 90%;
+        margin: auto 20px 30px 20px;
+        color: white;
+    }
+
+    footer div {
+        margin: 10px;
+        display: flex;
+    }
+
+    footer div img {
+        margin-inline: 8px;
+        border: 1.1px solid rgb(93, 141, 245);
+        border-radius: 10px;
+    }
+
+    .icon-footer {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin: 10px;
+        border-radius: 50%;
+        transition: all .8s;
+        cursor: pointer;
+    }
+
+    .icon-footer:hover {
+        background-color: #1877f2;
+        box-shadow: 0 0 20px #1877f2;
+    }
+
+    .icon-footer:hover:nth-child(2) {
+        background-color: #1877f2;
+        box-shadow: 0 0 20px #1877f2;
+    }
+
+    .icon-footer i {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.7rem;
+    }
+
+    svg circle {
+        stroke-dasharray: 150;
+        transition: all .8s ease-in-out;
+    }
+
+    .icon-footer:hover circle {
+        stroke-dasharray: 220;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .boton-dark {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    section {
+        width: 100%;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%;
+        margin: 10px;
+    }
+
+    .card1 {
+        width: 90%;
+    }
+
+
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 820px) {
+    main {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+
+    section {
+        width: 100%;
+        padding: 20px;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    aside {
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .card1 {
+        width: 230px;
+        margin: 20px 0;
+    }
+
+}
+
+
+@media screen and (min-width: 821px) and (max-width: 1491px) {
+    main {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+
+    section {
+        width: 100%;
+        padding: 20px;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    aside {
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: calc(50% - 40px);
+        margin: 20px;
+    }
+
+    .card1 {
+        width: 80%;
+        margin: 20px 0;
+    }
+
+}
+
+
+/* Fondo */
 
 :root {
     /* es para activar el modo ascuro*/
@@ -338,6 +749,36 @@ body.dark {
 body.dark .boton-dark .btn::before {
     content: '\f185';
     font-family: fontAwesome;
+}
+
+/* EFECTO NEON TITULO*/
+.box h2 {
+    color: #fff;
+    font-size: 4em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #bf45f8, 0 0 20px #be32ff, 0 0 40px #be32ff,
+        0 0 80px #be32ff, 0 0 120px #be32ff;
+
+
+}
+
+.box {
+    margin-bottom: 55px;
+}
+
+.titlogo {
+    color: white;
+    font-size: 40px;
+    margin-left: 40px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #bf45f8, 0 0 20px #bf45f8, 0 0 40px #bf45f8;
+}
+
+.titlogo:hover {
+    text-shadow: 0 0 10px #bf45f8, 0 0 20px #bf45f8, 0 0 40px #bf45f8,
+        0 0 80px #bf45f8, 0 0 120px #bf45f8;
+
 }
 
 
@@ -497,6 +938,7 @@ body.dark .container1 .card3:nth-child(1) {
 }
 
 
+
 /* 
 SEGUNDA TARJETA
 */
@@ -555,7 +997,7 @@ body.dark .container1 .card3:nth-child(2) {
 
 
 /*
-TERCER TARJETA
+TERCERA TARJETA
 */
 
 body.dark .container1 .card3:nth-child(3) {
@@ -615,12 +1057,11 @@ body.dark .container1 .card3:nth-child(3) {
   CUARTA CARD 
 */
 
-
 body.dark .container1 .card3:nth-child(4) {
     box-shadow: var(--box-shadow-1);
 }
 
-.container1 .card3 span.uno:nth-child(4) {
+.container1 .card3 span.cuatro:nth-child(1) {
     position: absolute;
     top: 0;
     left: 0;
@@ -642,7 +1083,7 @@ body.dark .container1 .card3:nth-child(4) {
 }
 
 /* DERECHA */
-.container1 .card3 span.cuatro:nth-child(5) {
+.container1 .card3 span.cuatro:nth-child(2) {
     position: absolute;
     top: 0;
     right: 0;
@@ -665,7 +1106,7 @@ body.dark .container1 .card3:nth-child(4) {
 }
 
 /* ABAJO */
-.container1 .card3 span.cuatro:nth-child(6) {
+.container1 .card3 span.cuatro:nth-child(3) {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -688,7 +1129,7 @@ body.dark .container1 .card3:nth-child(4) {
 }
 
 /* izquierda */
-.container1 .card3 span.cuatro:nth-child(7) {
+.container1 .card3 span.cuatro:nth-child(4) {
     position: absolute;
     top: 0;
     left: 0;
@@ -710,6 +1151,7 @@ body.dark .container1 .card3:nth-child(4) {
 }
 
 
+
 /* 
 QUINTA TARJETA
 */
@@ -719,7 +1161,7 @@ body.dark .container1 .card3:nth-child(5) {
 }
 
 /* arriba */
-.container1 .card3 span.cinco:nth-child(4) {
+.container1 .card3 span.cinco:nth-child(1) {
 
     position: absolute;
     top: 0;
@@ -731,7 +1173,7 @@ body.dark .container1 .card3:nth-child(5) {
 }
 
 /* DERECHA */
-.container1 .card3 span.cinco:nth-child(5) {
+.container1 .card3 span.cinco:nth-child(2) {
     position: absolute;
     top: 0;
     right: 0;
@@ -743,7 +1185,7 @@ body.dark .container1 .card3:nth-child(5) {
 }
 
 /* ABAJO */
-.container1 .card3 span.cinco:nth-child(6) {
+.container1 .card3 span.cinco:nth-child(3) {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -755,7 +1197,7 @@ body.dark .container1 .card3:nth-child(5) {
 }
 
 /* izquierda */
-.container1 .card3 span.cinco:nth-child(7) {
+.container1 .card3 span.cinco:nth-child(4) {
     position: absolute;
     top: 0;
     left: 0;
@@ -776,7 +1218,7 @@ body.dark .container1 .card3:nth-child(6) {
 }
 
 /* arriba */
-.container1 .card3 span.seis:nth-child(4) {
+.container1 .card3 span.seis:nth-child(1) {
 
     position: absolute;
     top: 0;
@@ -788,7 +1230,7 @@ body.dark .container1 .card3:nth-child(6) {
 }
 
 /* DERECHA */
-.container1 .card3 span.seis:nth-child(5) {
+.container1 .card3 span.seis:nth-child(2) {
     position: absolute;
     top: 0;
     right: 0;
@@ -800,7 +1242,7 @@ body.dark .container1 .card3:nth-child(6) {
 }
 
 /* ABAJO */
-.container1 .card3 span.seis:nth-child(6) {
+.container1 .card3 span.seis:nth-child(3) {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -812,7 +1254,219 @@ body.dark .container1 .card3:nth-child(6) {
 }
 
 /* izquierda */
-.container1 .card3 span.seis:nth-child(7) {
+.container1 .card3 span.seis:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #fd007fe2);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/*
+SÉPTIMA TARJETA
+*/
+
+body.dark .container1 .card3:nth-child(7) {
+    box-shadow: var(--box-shadow-1);
+}
+
+.container1 .card3 span.siete:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #00f7ff);
+    animation: animate1 2s linear infinite;
+}
+
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* DERECHA */
+.container1 .card3 span.siete:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #00f7ff);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* ABAJO */
+.container1 .card3 span.siete:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left, transparent, #00f7ff);
+    animation: animate3 2s linear infinite;
+    animation-delay: 1s;
+}
+
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* izquierda */
+.container1 .card3 span.siete:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #00f7ff);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+
+/* 
+OCTAVA TARJETA
+*/
+
+body.dark .container1 .card3:nth-child(8) {
+    box-shadow: var(--box-shadow-2);
+}
+
+/* arriba */
+.container1 .card3 span.ocho:nth-child(1) {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #f2ff00);
+    animation: animate1 2s linear infinite;
+}
+
+/* DERECHA */
+.container1 .card3 span.ocho:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #f2ff00);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/* ABAJO */
+.container1 .card3 span.ocho:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left, transparent, #f2ff00);
+    animation: animate3 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/* izquierda */
+.container1 .card3 span.ocho:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #f2ff00);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+
+/*
+NOVENA TARJETA
+*/
+
+body.dark .container1 .card3:nth-child(9) {
+    box-shadow: var(--box-shadow-3);
+}
+
+/* arriba */
+.container1 .card3 span.nueve:nth-child(1) {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #fd007fe2);
+    animation: animate1 2s linear infinite;
+}
+
+/* DERECHA */
+.container1 .card3 span.nueve:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #fd007fe2);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/* ABAJO */
+.container1 .card3 span.nueve:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left, transparent, #fd007fe2);
+    animation: animate3 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/* izquierda */
+.container1 .card3 span.nueve:nth-child(4) {
     position: absolute;
     top: 0;
     left: 0;
@@ -824,174 +1478,215 @@ body.dark .container1 .card3:nth-child(6) {
 }
 
 
+/*
+DÉCIMA TARJETA
+*/
 
-
-
-
-
-
-
-
-.icon {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    margin: 10px;
-    border-radius: 50%;
-    transition: all .8s;
-    cursor: pointer;
+body.dark .container1 .card3:nth-child(10) {
+    box-shadow: var(--box-shadow-1);
 }
 
-.icon:hover {
-    background-color: #1877f2;
-    box-shadow: 0 0 20px #1877f2;
-}
-
-.icon:hover:nth-child(2) {
-    background-color: #1877f2;
-    box-shadow: 0 0 20px #1877f2;
-}
-
-.icon i {
-    color: #fff;
+.container1 .card3 span.diez:nth-child(1) {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.7rem;
-}
-
-svg circle {
-    stroke-dasharray: 150;
-    transition: all .8s ease-in-out;
-}
-
-.icon:hover circle {
-    stroke-dasharray: 220;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #00f7ff);
+    animation: animate1 2s linear infinite;
 }
 
 
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
 
-
-
-
-nav .logo {
-    color: white;
-    font-size: 33px;
-    font-weight: bold;
-    line-height: 70px;
-    padding-left: 10px;
+    100% {
+        transform: translateX(100%);
+    }
 }
 
-nav {
-    height: 70px;
-    background: #000000;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
-    margin-bottom: 90px;
-    padding: 20px;
-}
-
-nav ul {
-    float: right;
-    margin-right: 30px;
-}
-
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
-    color: white;
-    display: block;
-    padding: 0 15px;
-    line-height: 70px;
-    font-size: 20px;
-    background: #000000;
-    transition: .5s;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    color: #dd6dff;
-}
-
-nav ul ul {
+/* DERECHA */
+.container1 .card3 span.diez:nth-child(2) {
     position: absolute;
-    top: 85px;
-    border-top: 3px solid #dd6dff;
-    opacity: 0;
-    visibility: hidden;
-}
-
-nav ul li:hover>ul {
-    top: 70px;
-    opacity: 1;
-    visibility: visible;
-    transition: .3s linear;
-}
-
-nav ul ul li {
-    width: 150px;
-    display: list-item;
-    position: relative;
-    border: 1px solid #000000;
-    border-top: none;
-}
-
-nav ul ul li a {
-    line-height: 50px;
-}
-
-nav ul ul ul {
-    border-top: none;
-}
-
-nav ul ul ul li {
-    position: relative;
-    top: -70px;
-    left: 150px;
-}
-
-nav ul ul li a i {
-    margin-left: 45px;
-}
-
-.logo {
-    width: 100px;
-    height: 100px;
-
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #00f7ff);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
 }
 
 
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
 
-
-
-/* EFECTO NEON TITULO*/
-.box h2 {
-    color: #fff;
-    font-size: 4em;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-shadow: 0 0 10px #bf45f8, 0 0 20px #be32ff, 0 0 40px #be32ff,
-        0 0 80px #be32ff, 0 0 120px #be32ff;
-
-
+    100% {
+        transform: translateY(100%);
+    }
 }
 
-.box {
-    margin-bottom: 55px;
+/* ABAJO */
+.container1 .card3 span.diez:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left, transparent, #00f7ff);
+    animation: animate3 2s linear infinite;
+    animation-delay: 1s;
 }
 
-.titlogo {
-    color: white;
-    font-size: 40px;
-    margin-left: 40px;
-    font-weight: bold;
-    text-shadow: 0 0 10px #bf45f8, 0 0 20px #bf45f8, 0 0 40px #bf45f8;
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
-.titlogo:hover {
-    text-shadow: 0 0 10px #bf45f8, 0 0 20px #bf45f8, 0 0 40px #bf45f8,
-        0 0 80px #bf45f8, 0 0 120px #bf45f8;
-
+/* izquierda */
+.container1 .card3 span.diez:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #00f7ff);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
 }
+
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+
+/* 
+ONCEAVA TARJETA
+*/
+
+body.dark .container1 .card3:nth-child(11) {
+    box-shadow: var(--box-shadow-2);
+}
+
+/* arriba */
+.container1 .card3 span.once:nth-child(1) {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #f2ff00);
+    animation: animate1 2s linear infinite;
+}
+
+/* DERECHA */
+.container1 .card3 span.once:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #f2ff00);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/* ABAJO */
+.container1 .card3 span.once:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left, transparent, #f2ff00);
+    animation: animate3 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/* izquierda */
+.container1 .card3 span.once:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #f2ff00);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+
+/*
+DOCEAVA TARJETA
+*/
+
+body.dark .container1 .card3:nth-child(12) {
+    box-shadow: var(--box-shadow-3);
+}
+
+/* arriba */
+.container1 .card3 span.doce:nth-child(1) {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #fd007fe2);
+    animation: animate1 2s linear infinite;
+}
+
+/* DERECHA */
+.container1 .card3 span.doce:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #fd007fe2);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/* ABAJO */
+.container1 .card3 span.doce:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left, transparent, #fd007fe2);
+    animation: animate3 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/* izquierda */
+.container1 .card3 span.doce:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #fd007fe2);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+

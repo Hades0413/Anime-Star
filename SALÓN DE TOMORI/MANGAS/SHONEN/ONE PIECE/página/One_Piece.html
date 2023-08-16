@@ -12,20 +12,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" />
-
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
 </head>
 
 <body>
+
     <nav>
-        <a href="../../../../INICIO/Inicio.html" class="titlogo">Anime Star</a>
+        <div class="logo">Anime Star</div>
+        <label for="btn" class="icon">
+            <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
         <ul>
             <li><a href="../../../../INICIO/Inicio.html">Home</a></li>
-
-
             <li><a href="../../../../CONÓCENOS/conócenos.html">Conócenos</a></li>
-            <!--Cosplay BARRA-->
-            <li> <a href="#">Cosplay</a>
+            <li>
+                <label for="btn-1" class="show">Cosplay</label>
+                <a href="#">Cosplay</a>
+                <input type="checkbox" id="btn-1">
                 <ul>
                     <li><a href="../../../../COSPLAY/JUJUTSU KAISEN/pagina/Jujutsu.html">Jujutsu</a></li>
                     <li><a href="../../../../COSPLAY/KIMETSU NO YAIBA/pagina/Kimetsu.html">Kimetsu</a></li>
@@ -34,11 +40,10 @@
                     <li><a href="../../../../COSPLAY/TOKYO REVENGERS/pagina/Tokyo_Revengers.html">Tokyo R</a></li>
                 </ul>
             </li>
-
-            <!--Cosplay Barra-->
-
-            <!--Tienda Barra-->
-            <li><a href="#">Tienda</a>
+            <li>
+                <label for="btn-2" class="show">Tienda</label>
+                <a href="#">Tienda</a>
+                <input type="checkbox" id="btn-2">
                 <ul class="categoria">
                     <li><a href="../../../../TIENDA/ACCESORIOS/tienda.html">Accesorios</a></li>
                     <li><a href="../../../../TIENDA/ARMAS/Tienda2.html">Armas</a></li>
@@ -46,12 +51,15 @@
                     <li><a href="../../../../TIENDA/JUEGOS/Tienda4.html">Juegos</a></li>
                 </ul>
             </li>
-            <!--Tienda Barra-->
-
-            <!--Manga  Barra-->
-            <li><a href="#">Manga</a>
+            <li>
+                <label for="btn-3" class="show">Manga</label>
+                <a href="#">Manga</a>
+                <input type="checkbox" id="btn-3">
                 <ul>
-                    <li><a href="#">Shonen</a>
+                    <li>
+                        <label for="btn-4" class="show">Shonen</label>
+                        <a href="#">Shonen</a>
+                        <input type="checkbox" id="btn-4">
                         <ul>
                             <li><a href="../../BLACK CLOVER/página/Black_Clover.html">Black Clover</a></li>
                             <li><a href="../../DRAGON BALL SUPER/página/DBS.html">Dragon BS</a></li>
@@ -64,32 +72,35 @@
                             <li><a href="../../TOKYO REVENGERS/pagina/Tokyo_Revengers.html">Tokyo R</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Romance</a>
+                    <li>
+                        <label for="btn-5" class="show">Romance</label>
+                        <a href="#">Romance</a>
+                        <input type="checkbox" id="btn-5">
                         <ul>
                             <li><a href="../../../ROMANCE/Kamisama Hajimemashita/pagina/Kamisama.html">Kamisama</a></li>
                             <li><a href="../../../ROMANCE/HORIMIYA/pagina/Horimiya.html">Horimiya</a></li>
-                            <li><a href="../../../ROMANCE/SONO BISQUE DOLL WA KOI SURU/pagina/Sono_Bisque.html">SonoBisque</a></li>
+                            <li><a href="../../../ROMANCE/SONO BISQUE DOLL WA KOI SURU/pagina/Sono_Bisque.html">Sono
+                                    Bisque</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Seinen</a>
+                    <li>
+                        <label for="btn-6" class="show">Seinen</label>
+                        <a href="#">Seinen</a>
+                        <input type="checkbox" id="btn-6">
                         <ul>
-                            <li><a href="../../../SEINEN/Death Note/pagina/Death.html">Death Note</a></li>
-                            <li><a href="../../../SEINEN/NAZO NO KANOJO X/página/Nazo_no_Kanojo.html">Nazo no Kanojo</a></li>
-                            <li><a href="../../../SEINEN/NEO GENESIS EVANGELION/página/Evangelion.html">Evangelion</a></li>
+                            <li><a href="../../../SEINEN/NAZO NO KANOJO X/página/Nazo_no_Kanojo.html">Nazo no Kanojo</a>
+                            </li>
+                            <li><a href="../../../SEINEN/NEO GENESIS EVANGELION/página/Evangelion.html">Evangelion</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
             </li>
-            <!--Manga Barra-->
-
-            <!-- ROPA BARRA -->
             <li><a href="../../../../ROPA/ropa.html">Ropa</a></li>
-            <!-- ROPA BARRA -->
-
-
             <li><a href="../../../../CONSULTAS/consultas.html">Consultas</a></li>
         </ul>
     </nav>
+
     <center>
         <aside>
             <div class="box">
@@ -102,7 +113,7 @@
         </aside>
     </center>
     <main>
-        <aside>
+        <aside id="card-container">
 
             <div class="card1">
                 <div class="face front">
@@ -117,7 +128,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on2.jpg" alt="">
@@ -146,7 +157,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on7.jpg" alt="">
@@ -175,7 +186,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on11.jpg" alt="">
@@ -204,7 +215,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on15.jpg" alt="">
@@ -234,7 +245,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on19.jpg" alt="">
@@ -264,7 +275,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on23.jpg" alt="">
@@ -296,7 +307,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on27.jpg" alt="">
@@ -327,7 +338,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on31.jpg" alt="">
@@ -345,7 +356,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on33.jpg" alt="">
@@ -378,7 +389,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on37.jpg" alt="">
@@ -396,7 +407,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on39.jpg" alt="">
@@ -412,7 +423,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on41.jpg" alt="">
@@ -430,7 +441,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on43.jpg" alt="">
@@ -450,7 +461,7 @@
 
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on33.jpg" alt="">
@@ -482,7 +493,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on37.jpg" alt="">
@@ -501,7 +512,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on39.jpg" alt="">
@@ -519,7 +530,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on41.jpg" alt="">
@@ -537,7 +548,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on43.jpg" alt="">
@@ -1871,7 +1882,7 @@
         </section>
 
 
-        <aside>
+        <aside id="card-container2">
 
 
             <div class="card1">
@@ -1887,7 +1898,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on4.jpg" alt="">
@@ -1917,7 +1928,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on8.jpg" alt="">
@@ -1946,7 +1957,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on12.jpg" alt="">
@@ -1975,7 +1986,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on44.jpg" alt="">
@@ -2005,7 +2016,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on20.jpg" alt="">
@@ -2038,7 +2049,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on24.jpg" alt="">
@@ -2071,7 +2082,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on28.jpg" alt="">
@@ -2106,7 +2117,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on32.jpg" alt="">
@@ -2123,7 +2134,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on34.jpg" alt="">
@@ -2154,7 +2165,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on38.jpg" alt="">
@@ -2170,7 +2181,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on40.jpg" alt="">
@@ -2188,7 +2199,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on42.jpg" alt="">
@@ -2206,7 +2217,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on16.jpg" alt="">
@@ -2223,7 +2234,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on33.jpg" alt="">
@@ -2256,7 +2267,7 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on37.jpg" alt="">
@@ -2273,7 +2284,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on39.jpg" alt="">
@@ -2290,7 +2301,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on41.jpg" alt="">
@@ -2308,7 +2319,7 @@
             </div>
 
 
-            <br><br>
+            
             <div class="card1">
                 <div class="face front">
                     <img loading="lazy" src="../imagenes/on43.jpg" alt="">
@@ -2328,11 +2339,9 @@
     </div>
     <br><br>
     <footer>
-
         <p>Síguenos en nuestras redes sociales</p><br><br>
-
         <a href="https://www.facebook.com/Salon-Tomori-105671722193710">
-            <div class="icon">
+            <div class="icon-footer">
                 <svg heigth="80" width="80">
                     <circle cx="40" cy="40" r=35 stroke="white" stroke-width="4" fill="none"></circle>
                 </svg>
@@ -2340,9 +2349,8 @@
             </div>
         </a>
 
-
         <a href="https://twitter.com/SalondeTomori">
-            <div class="icon">
+            <div class="icon-footer">
                 <svg heigth="80" width="80">
                     <circle cx="40" cy="40" r=35 stroke="white" stroke-width="4" fill="none"></circle>
                 </svg>
@@ -2350,11 +2358,15 @@
             </div>
         </a>
 
-
     </footer>
 
+    <script>
+        window.onscroll = () => {
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
 
+    <script src="../js/efectos.js"></script>
 </body>
 
 </html>
-<script src="../js/efectos.js"></script>

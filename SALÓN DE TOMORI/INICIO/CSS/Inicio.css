@@ -12,6 +12,18 @@
     0 0 80px #bf45f8, 0 0 120px #bf45f8;
 }
 
+html::-webkit-scrollbar{
+  width:1.2rem;
+}
+
+html::-webkit-scrollbar-track{
+  background:#222;
+}
+
+html::-webkit-scrollbar-thumb{
+  background:var(--fondo1);
+}
+
 body {
   background-color: var(--fondo1);
   background-image: var(--fondo2);
