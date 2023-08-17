@@ -120,6 +120,7 @@ nav ul ul ul li {
   position: relative;
   top: -60px;
   left: 150px;
+  z-index: 999;
 }
 
 #contenedor {
@@ -665,7 +666,7 @@ input {
   }
 
   .card {
-    width: calc(50% - 40px); 
+    width: calc(50% - 40px);
     margin: 20px;
   }
 
